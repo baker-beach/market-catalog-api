@@ -18,6 +18,10 @@ import com.bakerbeach.market.core.api.model.ShopContext;
 public interface CatalogService {
 
 	CatalogSearchResult groupIndexQuery(Locale locale, String priceGroup, Currency currency, String assortmentCode,
+			String countryOfDelivery, Date date, FilterList filterList, String query, List<String> filterQueries,
+			String groupBy, Pager pager, String sort);
+
+	CatalogSearchResult groupIndexQuery(Locale locale, String priceGroup, Currency currency, String assortmentCode,
 			String countryOfDelivery, Date date, FilterList filterList, String query, String groupBy, Pager pager,
 			String sort);
 
