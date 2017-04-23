@@ -49,4 +49,6 @@ public interface CatalogService {
 
 	CatalogSearchResult findGroupedProductByPrimaryGroup(ShopContext cmsContext, String primary_group);
 
+	void save(RawProduct product);
+
 }
