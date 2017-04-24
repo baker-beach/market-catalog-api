@@ -31,8 +31,12 @@ public interface CatalogService {
 
 	List<String> findGtin(String status, Boolean index);
 
+	@Deprecated
 	CatalogSearchResult findGroupByGroupCode(Locale locale, String priceGroup, Currency currency,
 			String countryOfDelivery, Date date, Collection<String> primaryGroups);
+
+	CatalogSearchResult findGroupByGroupCode(Locale locale, String priceGroup, Currency currency,
+			String countryOfDelivery, Date date, Collection<String> primaryGroups, String groupField);
 
 	// CatalogSearchResult findGroupedProductsByGtin(Locale locale, String
 	// priceGroup, Currency currency,
