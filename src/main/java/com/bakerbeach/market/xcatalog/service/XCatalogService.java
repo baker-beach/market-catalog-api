@@ -28,4 +28,7 @@ public interface XCatalogService {
 
 	void groupSave(String shopCode, Group group);
 
+	List<String> productCodes(String shopCode, Collection<Product.Type> types, Collection<Status> status,
+			Integer pageSize, Integer currentPage, String sort);
+
 }
