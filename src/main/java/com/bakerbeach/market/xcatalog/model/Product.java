@@ -52,6 +52,8 @@ public interface Product extends PriceAware {
 
 	Boolean isAvailable();
 
+	Boolean isConfigurable();
+
 	List<Asset> getAssets(String tag, String size);
 
 	BigDecimal getBasePrice1Divisor();
