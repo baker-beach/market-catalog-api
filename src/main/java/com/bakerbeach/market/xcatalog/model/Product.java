@@ -15,6 +15,10 @@ public interface Product extends PriceAware {
 	enum Status {
 		UNDEFINED, WORK, PUBLISHED, ARCHIVED
 	}
+	
+	enum Unit {
+		SINGLE, BUNDLE
+	};
 
 	String getCode();
 
@@ -37,6 +41,10 @@ public interface Product extends PriceAware {
 	Type getType();
 
 	void setType(Type type);
+	
+	Unit getUnit();
+
+	void setUnit(Unit unit);
 
 	String getBrand();
 
@@ -55,6 +63,10 @@ public interface Product extends PriceAware {
 	Boolean isConfigurable();
 
 	List<Asset> getAssets(String tag, String size);
+
+	Map<String, List<Map<String, Asset>>> getAssets();
+
+	void setAssets(Map<String, List<Map<String, Asset>>> assets);
 
 	BigDecimal getBasePrice1Divisor();
 

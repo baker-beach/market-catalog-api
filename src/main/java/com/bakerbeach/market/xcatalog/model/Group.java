@@ -1,8 +1,7 @@
 package com.bakerbeach.market.xcatalog.model;
 
-import java.util.Currency;
-import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 import com.bakerbeach.market.xcatalog.model.Product.Status;
 
@@ -32,10 +31,10 @@ public interface Group {
 
 	void setTemplate(String template);
 
-	Price getMinPrice(Currency currency, String priceGroup, Date date);
-
 	List<Product> getMembers();
 
 	void setMembers(List<Product> members);
+
+	void setCachedMinPrices(Map<String, Price> cachedMinPrices);
 
 }

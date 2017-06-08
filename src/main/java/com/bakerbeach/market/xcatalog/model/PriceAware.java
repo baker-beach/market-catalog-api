@@ -1,16 +1,18 @@
 package com.bakerbeach.market.xcatalog.model;
 
-import java.math.BigDecimal;
-import java.util.Currency;
-import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 public interface PriceAware {
 
 	List<Price> getPrices();
 
+	void setPrices(List<Price> prices);
+
 	void addPrice(Price price);
 
-	Price getPrice(Currency currency, String priceGroup, Date date);
+	Map<String, Price> getCachedPrices();
+
+	void setCachedPrices(Map<String, Price> cachedPrices);
 
 }

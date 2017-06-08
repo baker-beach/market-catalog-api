@@ -5,11 +5,14 @@ import java.util.Currency;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 
 import com.bakerbeach.market.xcatalog.model.Facets;
 import com.bakerbeach.market.xcatalog.model.Group;
 import com.bakerbeach.market.xcatalog.model.Pager;
+import com.bakerbeach.market.xcatalog.model.Price;
 import com.bakerbeach.market.xcatalog.model.Product;
+import com.bakerbeach.market.xcatalog.model.Product.Option;
 import com.bakerbeach.market.xcatalog.model.Product.Status;
 import com.bakerbeach.market.xcatalog.model.SearchResult;
 
@@ -30,5 +33,11 @@ public interface XCatalogService {
 
 	List<String> productCodes(String shopCode, Collection<Product.Type> types, Collection<Status> status,
 			Integer pageSize, Integer currentPage, String sort);
+
+	Map<String, Price> getCurrentPrices(List<Price> prices, Currency currency, String priceGroup, Date date);
+
+	Map<String, Price> getCurrentPrices(Product product, Currency currency, String priceGroup, Date date);
+
+	Map<String, Price> getCurrentPrices(Option option, Currency currency, String priceGroup, Date date);
 
 }
