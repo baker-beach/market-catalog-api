@@ -104,6 +104,14 @@ public interface Product extends PriceAware {
 
 	List<String> getCategories();
 
+	BigDecimal getMinQty();
+
+	void setMinQty(BigDecimal minQty);
+
+	BigDecimal getMaxQty();
+
+	void setMaxQty(BigDecimal maxQty);
+
 	public interface Component {
 
 		String getCode();

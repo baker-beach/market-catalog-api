@@ -10,7 +10,7 @@
 	<artifactId>market-catalog-api</artifactId>
 	<name>market-catalog-api</name>
 	<packaging>jar</packaging>
-	<version>3.0.2</version>
+	<version>3.0.3</version>
 	<properties>
 	</properties>
 	<dependencies>
