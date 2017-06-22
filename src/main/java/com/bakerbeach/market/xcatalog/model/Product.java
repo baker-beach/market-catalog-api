@@ -56,6 +56,8 @@ public interface Product extends PriceAware {
 
 	Map<String, Option> getOptions();
 
+	Boolean isIndexed();
+	
 	Boolean isRequired();
 
 	Boolean isAvailable();
