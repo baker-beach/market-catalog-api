@@ -17,7 +17,7 @@ public interface Product extends PriceAware {
 	}
 	
 	enum Unit {
-		SINGLE, BUNDLE
+		SINGLE, BUNDLE, HYBRID
 	};
 
 	String getCode();
