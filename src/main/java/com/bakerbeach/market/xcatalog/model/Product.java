@@ -103,6 +103,8 @@ public interface Product extends PriceAware {
 	Component getComponent(String code);
 
 	List<String> getCategories();
+	
+	String getMainCategory();
 
 	BigDecimal getMinQty();
 
