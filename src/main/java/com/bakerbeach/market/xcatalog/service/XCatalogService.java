@@ -19,6 +19,8 @@ import com.bakerbeach.market.xcatalog.model.SearchResult;
 public interface XCatalogService {
 
 	List<Product> rawByGtin(String shopCode, Status status, Collection<String> codes);
+	
+	List<Product> rawByFilter(String shopCode,Map<String,Object> filters);
 
 	Group groupByCode(String shopCode, Product.Status status, Locale locale, String priceGroup, Currency currency,
 			String countryOfDelivery, Date date, String groupBy, String code) throws XCatalogServiceException;
