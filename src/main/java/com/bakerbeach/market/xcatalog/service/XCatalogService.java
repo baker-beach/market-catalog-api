@@ -14,16 +14,21 @@ import com.bakerbeach.market.xcatalog.model.Price;
 import com.bakerbeach.market.xcatalog.model.Product;
 import com.bakerbeach.market.xcatalog.model.Product.Option;
 import com.bakerbeach.market.xcatalog.model.Product.Status;
+import com.bakerbeach.market.xcatalog.model.Product.Unit;
 import com.bakerbeach.market.xcatalog.model.SearchResult;
 
 public interface XCatalogService {
 
 	List<Product> rawByGtin(String shopCode, Status status, Collection<String> codes);
-	
-	List<Product> rawByFilter(String shopCode,Map<String,Object> filters);
+
+	List<Product> rawByFilter(String shopCode, Map<String, Object> filters);
 
 	Group groupByCode(String shopCode, Product.Status status, Locale locale, String priceGroup, Currency currency,
 			String countryOfDelivery, Date date, String groupBy, String code) throws XCatalogServiceException;
+
+	SearchResult groupByCode(String shopCode, Status status, Locale locale, String priceGroup, Currency currency,
+			String countryOfDelivery, Date date, String groupBy, List<String> codes, List<Unit> units, Pager pager,
+			String sort) throws XCatalogServiceException;
 
 	SearchResult groupByIndexQuery(String shopCode, Status status, Locale locale, String priceGroup, Currency currency,
 			String countryOfDelivery, Date date, Facets facets, String query, List<String> filterQueries,
